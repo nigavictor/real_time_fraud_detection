@@ -188,5 +188,7 @@ def demonstrate_system():
     print(f"🚀 Ready to showcase on GitHub and to employers!")
     print(f"This project demonstrates production-level ML engineering.")
 
+#DEMO
+
 if __name__ == "__main__":
     demonstrate_system()

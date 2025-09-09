@@ -268,3 +268,25 @@ streaming/data/
 # Alert system temporary files
 alerts_queue/
 email_templates/generated/
+
+# Documentation Files (excluding README)
+# ---------------------------------------
+*.md
+!README.md
+!docs/*.md
+
+# Test and Demo Files
+# -------------------
+test_*.py
+*_test.py
+demo*.py
+*demo*.py
+example*.py
+*example*.py
+
+# Project-specific temporary files
+# ---------------------------------
+live_demo.py
+quick_demo.py
+final_demo.py
+simple_dashboard.py
