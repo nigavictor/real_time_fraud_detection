@@ -1,0 +1,270 @@
+# Real-Time Fraud Detection - .gitignore
+# ===========================================
+
+# Environment Files & Secrets
+# -----------------------------
+.env
+.env.local
+.env.*.local
+*.env
+config.json
+secrets.json
+credentials.json
+.secrets/
+
+# Virtual Environments
+# --------------------
+venv/
+env/
+ENV/
+fraud_env/
+fraud_detection_env/
+.venv/
+.ENV/
+*.egg-info/
+
+# Python
+# -------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Large Data Files (keep sample versions)
+# ----------------------------------------
+# Raw data files > 50MB
+data/raw/*_transactions_*.csv
+data/raw/fraud_transactions_*.csv
+!data/raw/*sample*.csv
+!data/raw/*demo*.csv
+
+# Processed data files > 10MB  
+data/processed/X_train_*.csv
+data/processed/X_test_*.csv
+data/processed/y_train_*.csv
+data/processed/y_test_*.csv
+!data/processed/*sample*.csv
+!data/processed/*demo*.csv
+
+# Model Files (trained models can be large)
+# ------------------------------------------
+data/models/trained_models_*/
+data/models/*.joblib
+data/models/*.pkl
+data/models/*.h5
+data/models/*.pt
+data/models/*.pth
+data/models/*.onnx
+!data/models/*sample*
+!data/models/*demo*
+
+# Large Excel/CSV Files
+# ---------------------
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+!*sample*.xlsx
+!*sample*.xls
+!*demo*.xlsx
+!*demo*.xls
+
+# Jupyter Notebook Checkpoints
+# -----------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# IDE Files
+# ---------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+# --------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.tmp
+*.temp
+
+# Logs & Debug Files
+# ------------------
+logs/
+*.log
+*.out
+debug.log
+error.log
+access.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary Files
+# ---------------
+tmp/
+temp/
+.tmp/
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Docker
+# ------
+.dockerignore
+docker-compose.override.yml
+*.docker
+.docker/
+
+# Database Files
+# --------------
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Redis Dumps
+# -----------
+dump.rdb
+redis.conf
+
+# Kafka Logs
+# ----------
+kafka-logs/
+zookeeper/
+
+# Node.js (if using for frontend)
+# --------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Generated Documentation
+# ------------------------
+docs/_build/
+docs/build/
+site/
+
+# Backup Files
+# ------------
+*.bak
+*.backup
+*.old
+
+# System Files
+# ------------
+*.pid
+*.seed
+*.pid.lock
+
+# Large Binary Files
+# ------------------
+*.bin
+*.dat
+*.dump
+*.parquet
+
+# ML Experiment Tracking
+# -----------------------
+mlruns/
+.mlflow/
+wandb/
+tensorboard_logs/
+lightning_logs/
+
+# Large Image/Media Files
+# -----------------------
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.mp4
+*.avi
+*.mov
+!*sample*.png
+!*sample*.jpg
+!*demo*.png
+!*demo*.jpg
+!screenshots/
+!docs/images/
+
+# Compressed Archives
+# -------------------
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+!*sample*.zip
+!*demo*.zip
+
+# Configuration Overrides
+# ------------------------
+local_config.py
+local_settings.py
+override.py
+
+# Performance/Profile Data
+# ------------------------
+*.prof
+*.pstats
+profiling/
+
+# Generated Sample Data (keep small samples)
+# -------------------------------------------
+# Exclude large generated files but keep samples
+!*_sample_*.csv
+!*_demo_*.csv
+!sample_*.json
+!demo_*.json
+
+# Specific Project Exclusions
+# ----------------------------
+# Fraud detection specific large files
+fraud_transactions_[0-9]*.csv
+processed_data_[0-9]*.csv
+model_artifacts_[0-9]*/
+
+# Streaming data temporary files
+streaming/tmp/
+streaming/logs/
+streaming/data/
+
+# Alert system temporary files
+alerts_queue/
+email_templates/generated/
